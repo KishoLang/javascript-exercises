@@ -1,4 +1,5 @@
 const fibonacci = function(count) {
+    const t0 = performance.now();
     if (count < 0) return "OOPS";
     if (count === 0) return 0;
 
@@ -10,7 +11,8 @@ const fibonacci = function(count) {
         secondPrev = firstPrev;
         firstPrev = current;
     }
-
+    const t1 = performance.now();
+    console.log(t1 - t0);
     return firstPrev;
 };
 
